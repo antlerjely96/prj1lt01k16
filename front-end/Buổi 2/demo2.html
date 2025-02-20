@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <!--Unordered List-->
+    <ul type="square">
+        <li>Tiếng Anh</li>
+        <li>Toán cao cấp</li>
+        <li>Tin học căn bản</li>
+        <li>Lập trình căn bản</li>
+        <li>Chính trị</li>
+        <li>Pháp luật</li>
+    </ul>
+
+    <!--Ordered List-->
+    <ol type="i">
+        <li>Ngủ dậy</li>
+        <li>Đánh răng, rửa mặt</li>
+        <li>Ăn sáng</li>
+        <li>Thay đồ</li>
+        <li>Mở cửa</li>
+        <li>Lấy xe</li>
+        <li>Đóng cửa</li>
+        <li>Đi học</li>
+        <li>Gửi xe</li>
+        <li>Lên lớp</li>
+    </ol>
+
+    <!--Nested list-->
+    <ul>
+        <li>Cài đặt PHPStorm
+            <ol>
+                <li>Tải PHPStorm</li>
+                <li>Mở file cài đặt</li>
+                <li>Cài đặt</li>
+            </ol>
+        </li>
+        <li>Mở code</li>
+    </ul>
+
+    <!--Table-->
+    <table border="1px" cellspacing="0px" cellpadding="10px">
+        <!--Table row-->
+        <tr>
+            <!--Table Heading-->
+            <th>Tên môn</th>
+            <th colspan="2">Điểm và số tín chỉ</th>
+        </tr>
+        <tr>
+            <td>Tiếng Anh</td>
+            <td>5.0</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Toán cao cấp</td>
+            <td>6.0</td>
+            <td rowspan="2">5</td>
+        </tr>
+        <tr>
+            <td>Tin học căn bản</td>
+            <td>8.0</td>
+        </tr>
+        <tr>
+            <td>Lập trình căn bản</td>
+            <td>7.0</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Pháp luật</td>
+            <td>3.0</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Chính trị</td>
+            <td>3.0</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <br>
+    <!--Nested table-->
+    <table border="1px" cellpadding="0" cellspacing="0" width="50%">
+        <tr>
+            <td>Cell 1 row 1</td>
+            <td>Cell 2 row 1</td>
+        </tr>
+        <tr>
+            <td>Cell 1 row 2</td>
+            <td>
+                <table border="1px" cellspacing="0" cellpadding="1px" width="100%">
+                    <tr>
+                        <td>Cell 2.1 Row 1</td>
+                        <td>Cell 2.2 Row 1</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 2.1 Row 2</td>
+                        <td>Cell 2.2 Row 2</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Form-->
+    <form>
+        Họ tên: <input type="text"><br>
+        Ngày sinh: <input type="date"><br>
+        Giới tính: <input type="radio" name="gioi_tinh" checked="checked">Nam <input type="radio" name="gioi_tinh"> Nữ <input type="radio" name="gioi_tinh"> Dân anh chị <br>
+        Địa chị: <input type="text"><br>
+        Sở thích: <input type="checkbox"> Ăn <input type="checkbox"> Chơi <input type="checkbox"> Ngủ <br>
+        Email: <input type="email"><br>
+        Password: <input type="password"><br>
+        Ảnh: <input type="file"><br>
+        Niên khóa: <select>
+            <option>K13</option>
+            <option>K14</option>
+            <option>K15</option>
+            <option selected="selected">K16</option>
+        </select> <br>
+        Ghi chú: <textarea></textarea><br>
+        <input type="reset" value="Reset"><br>
+        <input type="button" value="Button"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
