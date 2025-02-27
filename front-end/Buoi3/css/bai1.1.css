@@ -1,0 +1,37 @@
+h1 {
+    color: green;
+    text-align: center;
+}
+.subject_title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.formula {
+    font-style: italic;
+}
+.content {
+    color: red;
+}
+div {
+    color: blue;
+    background: #afafaf;
+    margin-left: 100px;
+    /*margin-right: 50px;*/
+    /*margin-top: 200px;*/
+    /*margin-bottom: 100px;*/
+    /* top - right - bottom - left
+        margin: 100px 200px 300px 400px;
+    */
+    /* top - right left - bottom
+        margin: 100px 200px 300px;
+    */
+    /* top bottom - right left
+        margin: 100px 200px;
+    */
+    /* top right bottom left
+        margin: 100px;
+    */
+    /*
+        margin: auto;
+    */
+}

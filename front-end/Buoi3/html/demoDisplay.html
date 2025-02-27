@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        p {
+            background: #a89b9b;
+            width: 50%;
+            height: 50%;
+            color: red;
+            /*display: inline;*/
+        }
+        a {
+            background: rgb(162, 237, 162);
+            width: 100px;
+            height: 50px;
+            /*display: block;*/
+            display: inline-block;
+        }
+        #parent {
+            background: yellow;
+            width: 1000px;
+            height: 500px;
+        }
+        #child {
+            background: green;
+            width: 50%;
+            height: 20%;
+        }
+        #grand-child {
+            background: blue;
+            width: 80%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <p>Thẻ p1</p>
+    <p>Thẻ p2</p>
+    <p>Thẻ p3</p>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <div id="parent">
+        <div id="child">
+            <div id="grand-child"></div>
+        </div>
+    </div>
+</body>
+</html>
