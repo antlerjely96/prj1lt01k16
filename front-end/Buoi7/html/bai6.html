@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function tinh(){
+            let a = parseInt(document.getElementById('a').value);
+            let giaiThua = 1;
+            if(a < 0){
+                document.getElementById('kq').innerHTML = "giai thừa không xác định";
+            } else {
+                for(let i = 1; i <= a; i++){
+                    giaiThua *= i;
+                }
+                document.getElementById('kq').innerHTML = "a!" + giaiThua;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Tính a!</h1>
+        <label for="a"> a =</label>
+        <input type="text" id="a"><br>
+        <span id="kq"></span><br>
+        <button type="button" onclick="tinh()">Tính</button>
+    </form>
+</body>
+</html>

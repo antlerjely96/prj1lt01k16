@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function tinhTong(){
+            let a = parseInt(document.getElementById('a').value);
+            let sum = 0;
+            for(let i = 0; i <= a; i++){
+                sum += i;
+            }
+            document.getElementById('result').innerHTML = "Tổng các số từ 1 đến a: " + sum;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="a">a: </label><input type="text" id="a"><br>
+        <span id="result"></span><br>
+        <button type="button" onclick="tinhTong()">Tính</button>
+    </form>
+</body>
+</html>

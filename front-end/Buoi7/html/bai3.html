@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function kiemTraTuoi(){
+            let tuoi = parseInt(document.getElementById('tuoi').value);
+            let kq;
+            if(tuoi <= 0) {
+                kq = "Nhập sai";
+            } else if(tuoi < 6){
+                kq = "mẫu giáo";
+            } else if(tuoi < 11){
+                kq = "cấp 1";
+            } else if(tuoi < 15){
+                kq = "cấp 2";
+            } else if(tuoi < 18){
+                kq = "cấp 3";
+            } else if(tuoi < 23){
+                kq = "cao đẳng,đại học";
+            } else {
+                kq = "Bán mình cho tư bản"
+            }
+            document.getElementById('kq').innerHTML = kq;
+        }
+    </script>
+</head>
+<body>
+    <label for="tuoi"> Nhập tuổi: </label>
+    <input type="text" id="tuoi"><br>
+    <span id="kq"></span><br>
+    <button onclick="kiemTraTuoi()"> Kiểm tra</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function capHoc(){
+            let namSinh = parseInt(document.getElementById("namSinh").value);
+            let tuoi = 2025 - namSinh;
+            let kq;
+            if(namSinh > 2025 || namSinh < 0){
+                kq = "Nhập sai năm sinh";
+            } else {
+                if ( tuoi >= 16 ){
+                    kq = "đủ tuổi đi tù";
+                } else {
+                    kq = "chưa đủ tuổi";
+                }
+            }
+            document.getElementById("kq").innerHTML = kq;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h2>Kiểm tra tuổi</h2>
+        <label for="namSinh">Nhập năm sinh của bạn:</label>
+        <input type="text" id="namSinh"><br>
+        <button onclick="capHoc()">Kiểm tra</button>
+        <h3 id="kq" style= 'color: blue'></h3>
+    </form>
+</body>
+</html>
