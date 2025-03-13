@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function tinh(){
+            //Lấy 1 thẻ theo id
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let tong = a + b;
+            document.getElementById('tong').value = tong;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        a: <input type="text" id="a"><br>
+        b: <input type="text" id="b"><br>
+        a + b: <input type="text" id="tong" readonly><br>
+        <button type="button" onclick="tinh()">Tính</button>
+    </form>
+</body>
+</html>

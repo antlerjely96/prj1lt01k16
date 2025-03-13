@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function thongTin(){
+            let hoTen = parseInt(document.getElementById('hoTen').value);
+            let namSinh = parseInt(document.getElementById('namSinh').value);
+            let tuoi = 2025 - namSinh;
+            alert('Hello' + hoTen + ', có tuổi: ' + tuoi);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="hoTen">Họ tên:</label><input type="text" id="hoTen"><br>
+        <label for="maSinhVien">Mã sv:</label> <input type="text" id="maSinhVien"><br>
+        <label for="namSinh">Năm sinh: </label><input type="text" id="namSinh"><br>
+        <input type="button" onclick="thongTin()" value="Gửi">
+    </form>
+</body>
+</html>
