@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function check(){
+            //Lấy giá trị của a
+            let a = parseInt(document.getElementById('a').value);
+            //Kiểm tra âm dương
+            if(a > 0){
+                document.getElementById('kq').textContent = "a là số dương";
+            } else if(a < 0){
+                document.getElementById('kq').textContent = "a là số âm";
+            } else {
+                document.getElementById('kq').textContent = "a là số không âm không dương";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="a">a: </label> <input type="text" id="a"><br>
+        <span id="kq"></span><br>
+        <button type="button" onclick="check()">Display</button>
+    </form>
+</body>
+</html>
