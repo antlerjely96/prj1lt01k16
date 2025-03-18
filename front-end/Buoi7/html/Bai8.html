@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<script>
+    function calculate(){
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let result;
+        if (a === b){
+            result = a;
+        }
+        if (a === 0 || b === 0){
+            result = a + b;
+        }
+        for(let i = 1; i <= a; i++){
+            if(a % i === 0 && b % i === 0){
+                result = i;
+            }
+        }
+        document.getElementById("result").innerHTML = "UCLN của " + a + " và " + b + " là: " +  result;
+    }
+</script>
+<body>
+    a: <input type="number" id="a"><br>
+    b: <input type="number" id="b"><br>
+    <span id="result"></span><br>
+    <button type="button" onclick="calculate()">calculate</button>
+</body>
+</html>

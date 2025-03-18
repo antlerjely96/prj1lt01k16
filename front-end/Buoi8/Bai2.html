@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function validate(){
+            //Định nghĩa count
+            let count = 0;
+            //Validate Họ tên
+            let name = document.getElementById('name').value;
+            let regexName = /^[a-zA-Z]+[a-zA-Z ]*$/;
+            let checkName = regexName.test(name);
+            if(name.length == 0){
+                document.getElementById('error_name').innerHTML = "Không được để trống";
+            } else if(checkName == false){
+                document.getElementById('error_name').innerHTML = "Tên chỉ được chứa chữ cái";
+            } else {
+                document.getElementById('error_name').innerHTML = "";
+                count++;
+            }
+            //Validate số điện thoại
+            let phone = document.getElementById('phone_number').value;
+            let regexPhone = /^0[0-9]{9}/;
+            let checkPhone = regexPhone.test(phone);
+            if(phone.length == 0){
+                document.getElementById('error_phone_number').innerHTML = "Không được để trống";
+            } else if(checkPhone == false){
+                document.getElementById('error_phone_number').innerHTML = "Số điện thoại chỉ chứa ký tự số";
+            } else {
+                document.getElementById('error_phone_number').innerHTML = "";
+                count++;
+            }
+            //Validate Địa chỉ
+            let address = document.getElementById('address').value;
+            if(address.length == 0){
+                document.getElementById('error_address').innerHTML = "Không được để trống";
+            } else {
+                document.getElementById('error_address').innerHTML = "";
+                count++;
+            }
+            //Validate email
+            let email = document.getElementById('email').value;
+            let regexEmail = /^[a-zA-Z0-9]+[a-zA-Z0-9._]*@[a-z0-9]{3, 7}.[a-z]{2, 6}[.a-z]*$/;
+            let checkEmail = regexEmail.test(email);
+            if(email.length == 0){
+                document.getElementById('error_email').innerHTML = "Không được để trống";
+            } else if(checkEmail == false){
+                document.getElementById('error_email').innerHTML = "Không đúng định dạng";
+            } else {
+                document.getElementById('error_email').innerHTML = "";
+                count++;
+            }
+            //Validate pwd
+            let password = document.getElementById('password').value;
+            let regexPassword = /^[a-zA-Z0-9@_.]{8, }$/;
+            let checkPassword = regexPassword.test(password);
+            if(password.length == 0){
+                document.getElementById('error_password').innerHTML = "Không được để trống";
+            } else if(checkPassword == false){
+                document.getElementById('error_password').innerHTML = "Không đúng định dạng";
+            } else {
+                document.getElementById('error_password').innerHTML = "";
+                count++;
+            }
+            //Validate giới tính
+            let gender = document.getElementsByName('gender');
+            let checkGender = 0;
+            for (let i = 0; i < gender.length; i++){
+                if(gender[i].checked){
+                    checkGender++;
+                }
+            }
+            if(checkGender == 0){
+                document.getElementById('error_gender').innerHTML = "Phải chọn 1 giới tính";
+            } else {
+                document.getElementById('error_gender').innerHTML = "";
+                count++;
+            }
+            if(count == 6){
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="#">
+        Họ tên: <input type="text" id="name"><span id="error_name"></span><br>
+        Phone number: <input type="text" id="phone_number"><span id="error_phone_number"></span><br>
+        Gender: <input type="radio" name="gender"> Male <input type="radio" name="gender"> Female <span id="error_gender"></span><br>
+        Address: <textarea id="address"></textarea><span id="error_address"></span><br>
+        Email: <input type="text" id="email"><span id="error_email"></span><br>
+        Password: <input type="password" id="password"><span id="error_password"></span><br>
+        <button onclick="return validate()">Register</button>
+    </form>
+</body>
+</html>
