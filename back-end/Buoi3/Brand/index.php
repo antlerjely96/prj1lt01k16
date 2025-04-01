@@ -17,6 +17,7 @@
         include_once "../Connection/close.php";
         //Hiển thị dữ liệu
     ?>
+    <a href="create.php">Add a brand</a>
     <table border="1px" cellpadding="0" cellspacing="0" width="100%">
         <tr>
             <th>Id</th>
