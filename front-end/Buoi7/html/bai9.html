@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="../css/bai9.css" type="text/css" rel="stylesheet">
+    <script src="../js/bai9.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" readonly id="number_input" value="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="clearLast()">C</button>
+            </td>
+            <td>
+                <button onclick="resetCalculator()">AC</button>
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td><button onclick="addNumber(1)">1</button></td>
+            <td><button onclick="addNumber(2)">2</button></td>
+            <td><button onclick="addNumber(3)">3</button></td>
+            <td><button onclick="setOperator('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addNumber(4)">4</button></td>
+            <td><button onclick="addNumber(5)">5</button></td>
+            <td><button onclick="addNumber(6)">6</button></td>
+            <td><button onclick="setOperator('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addNumber(7)">7</button></td>
+            <td><button onclick="addNumber(8)">8</button></td>
+            <td><button onclick="addNumber(9)">9</button></td>
+            <td><button onclick="setOperator('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addNumber(0)">0</button></td>
+            <td><button onclick="addDecimal()">.</button></td>
+            <td><button onclick="calculateResult()">=</button></td>
+            <td><button onclick="setOperator('/')">/</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

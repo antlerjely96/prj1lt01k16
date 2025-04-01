@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<script>
+    function validate(){
+        let count = 0;
+
+        let name = document.getElementById('name').value;
+        let regexName = /^[a-zA-Z0-9]+[a-zA-Z 0-9.]*$/;
+        let checkName = regexName.test(name);
+        if (name.length == 0){
+            document.getElementById('error_name').innerHTML = "không được để trống";
+        } else if(checkName == false){
+            document.getElementById('error_name').innerHTML = "tên chỉ được nhập kí tự";
+        } else {
+            document.getElementById('error_name').innerHTML = " ";
+            count++;
+        }
+        let size = document.getElementById('size').value;
+        let regexSize = /^[A-Z0-9]{4}$/;
+        let checkSize = regexSize.test(size);
+        if (size.length == 0){
+            document.getElementById('error_size').innerHTML = "không được để trống";
+        } else if(checkSize == false){
+            document.getElementById('error_size').innerHTML = "size chỉ được nhập kí tự";
+        } else {
+            document.getElementById('error_size').innerHTML = " ";
+            count++;
+        }
+        let color = document.getElementById('color').value;
+        let regexColor = /^[a-zA-Z]+$/;
+        let checkColor = regexColor.test(color);
+        if (color.length == 0){
+            document.getElementById('error_color').innerHTML = "không được để trống";
+        } else if(checkColor == false){
+            document.getElementById('error_color').innerHTML = "Màu chỉ được nhập kí tự";
+        } else {
+            document.getElementById('error_color').innerHTML = " ";
+            count++;
+        }
+        let quantity = document.getElementById('quantity').value;
+        let regexQuantity =/^[1-9]+[0-9]*$/
+        let checkQuantity = regexQuantity.test(quantity);
+        if (quantity.length == 0){
+            document.getElementById('error_quantity').innerHTML = "không được để trống";
+        } else if(checkQuantity == false){
+            document.getElementById('error_quantity').innerHTML = "Số lượng chỉ được nhập số";
+        } else {
+            document.getElementById('error_quantity').innerHTML = " ";
+            count++;
+        }
+        let price = document.getElementById('price').value;
+        let regexPrice =/^[0-9]+[0-9.]*$/;
+        let checkPrice = regexPrice.test(price);
+        if (price.length == 0){
+            document.getElementById('error_price').innerHTML = "không được để trống";
+        } else if(checkPrice == false){
+            document.getElementById('error_price').innerHTML = "Giá bán chỉ được nhập số";
+        } else {
+            document.getElementById('error_price').innerHTML = " ";
+            count++;
+        }
+        let description = document.getElementById('description').value;
+        let regexDescription = /^[a-zA-Z0-9 %\-.,+]+$/;
+        let checkDescription = regexDescription.test(description);
+        if (description.length == 0){
+            document.getElementById('error_description').innerHTML = "không được để trống";
+        } else if(checkDescription == false){
+            document.getElementById('error_description').innerHTML = "mô tả sản phẩm chỉ được nhập kí tự";
+        } else {
+            document.getElementById('error_description').innerHTML = " ";
+            count++;
+        }
+        if(count == 6){
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+<body>
+    <form method="post" action="#">
+        Tên sản phẩm: <input type="text" id="name"><span id="error_name"></span><br>
+        size: <input type="text" id="size"><span id="error_size"></span><br>
+        màu: <input type="text" id="color"><span id="error_color"></span><br>
+        số lượng: <input type="text" id="quantity"><span id="error_quantity"></span><br>
+        giá bán: <input type="text" id="price"><span id="error_price"></span><br>
+        mô tả sản phẩm: <textarea type="text" id="description"></textarea><span id="error_description"></span><br>
+        <button onclick="return validate()">Thêm sản phẩm</button>
+    </form>
+</body>
+</html>

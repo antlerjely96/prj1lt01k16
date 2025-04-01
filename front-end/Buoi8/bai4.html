@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script>
+        function validate() {
+            //Định nghĩa count
+            let count = 0;
+            //validate tên sinh viên
+            let tenSinhVien = document.getElementById('tenSinhVien').value;
+            let regextenSinhVien = /^[a-zA-Z] + [a-zA-Z]*$/;
+            let checktenSinhVien = regextenSinhVien.test(tenSinhVien);
+            if (tenSinhVien.length == 0) {
+                document.getElementById('error_tenSinhVien').innerHTML = "không được để trống";
+            } else if (checktenSinhVien == false) {
+                document.getElementById('error_tenSinhVien').innerHTML = "Tên chỉ được chứa chữ cái";
+            } else {
+                document.getElementById('error_tenSinhVien').innerHTML = "";
+                count++;
+            }
+            //validate lớp
+            let lop = document.getElementById('lop').value;
+            let regexLop = /^[a-zA-Z][0-9] + [a-zA-Z]*$/;
+            let checkLop = regexLop.test(lop);
+            if (lop.length == 0) {
+                document.getElementById('error_lop').innerHTML = "không được để trống";
+            } else if (checkLop == false) {
+                document.getElementById('error_lop').innerHTML = "Lớp được chứa cả kí tự chữ và số";
+            } else {
+                document.getElementById('error_lop').innerHTML = "";
+                count++;
+            }
+            //Validate môn học
+            let monHoc = document.getElementById('monHoc').value;
+            let regexmonHoc = /^[a-zA-Z] + [a-zA-Z]*$/;
+            let checkmonHoc = regexmonHoc.test(monHoc);
+            if (lop.length == 0) {
+                document.getElementById('error_monHoc').innerHTML = "Không được để trống";
+            } else if (checkmonHoc == false) {
+                document.getElementById('error_monHoc').innerHTML = "Môn học chỉ được chứa chữ cái";
+            } else {
+                document.getElementById('error_monHoc').innerHTML = "";
+                count++;
+            }
+            //validate lần thi
+            let lanThi = document.getElementById('lanThi').value;
+            let regexlanThi = /^[a-zA-Z] + [a-zA-Z]*$/;
+            let checklanTHi = regexlanThi.test(lanThi);
+            if (lanThi.length == 0) {
+                document.getElementById('error_lanThi').innerHTML = "Không được để trống";
+            } else if (checklanThi == false) {
+                // document.getElementById()
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+
+    </form>
+</body>
+</html>
