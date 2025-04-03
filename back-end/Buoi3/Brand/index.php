@@ -23,6 +23,8 @@
             <th>Id</th>
             <th>Name</th>
             <th>Country</th>
+            <th></th>
+            <th></th>
         </tr>
         <?php
             foreach ($brands as $brand) {
@@ -36,6 +38,12 @@
                 </td>
                 <td>
                     <?php echo $brand['country']; ?>
+                </td>
+                <td>
+                    <a href="edit.php?id=<?php echo $brand['id']; ?>">Edit</a>
+                </td>
+                <td>
+                    <a href="destroy.php?id=<?php echo $brand['id']; ?>">Delete</a>
                 </td>
             </tr>
         <?php
