@@ -6,6 +6,7 @@
     <title>Product's List</title>
 </head>
 <body>
+    <a href="create.php">Add a product</a>
     <table border="1px" cellspacing="0" cellpadding="0" width="80%">
         <tr>
             <th>ID</th>
