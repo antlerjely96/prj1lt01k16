@@ -7,6 +7,9 @@
 </head>
 <body>
     <?php
+        include_once "../layouts/header.php";
+    ?>
+    <?php
         //Mở kết nối đến DB
         include_once "../Connection/open.php";
         //Viết sql lấy dữ liệu
@@ -50,5 +53,8 @@
             }
         ?>
     </table>
+    <?php
+        include_once "../layouts/footer.php";
+    ?>
 </body>
 </html>

@@ -6,6 +6,9 @@
     <title>Add a brand</title>
 </head>
 <body>
+    <?php
+        include_once "../layouts/header.php";
+    ?>
     <form method="post" action="store.php">
         <label for="name">Name: </label><input type="text" name="name" id="name"><br>
         <label for="country">Country: </label><input type="text" name="country" id="country"><br>
