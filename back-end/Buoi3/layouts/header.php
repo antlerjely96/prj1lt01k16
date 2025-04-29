@@ -7,6 +7,7 @@
             <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
             <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="../Admins/logout.php" class="nav-link">Sign out</a></li>
         </ul>
     </header>
 </div>

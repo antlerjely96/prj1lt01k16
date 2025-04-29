@@ -7,6 +7,10 @@
 </head>
 <body>
     <?php
+        session_start();
+        if(empty($_SESSION['admin_email'])){
+            header('Location: ../Admins/login.php');;
+        }
         include_once "../layouts/header.php";
     ?>
     <?php
