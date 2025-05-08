@@ -6,11 +6,15 @@
     <title>Product's List</title>
 </head>
 <body>
+    <p>
+        <a href="#"> Trang chủ</a> > <a href="#">Danh sách sản phẩm</a>
+    </p>
     <a href="create.php">Add a product</a>
     <table border="1px" cellspacing="0" cellpadding="0" width="80%">
         <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Image</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Brand</th>
@@ -35,6 +39,9 @@
                 </td>
                 <td>
                     <?php echo $product["name"] ?>
+                </td>
+                <td>
+                    <img src="../image/<?php echo $product["image"] ?>" alt="product image">
                 </td>
                 <td>
                     <?php echo $product["price"] ?>

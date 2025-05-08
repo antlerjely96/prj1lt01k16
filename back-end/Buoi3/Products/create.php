@@ -16,8 +16,12 @@
         //Đóng kết nối
         include_once "../Connection/close.php";
     ?>
-    <form method="post" action="store.php">
+    <p>
+        <a href="#"> Trang chủ</a> > <a href="#">Thêm sản phẩm</a>
+    </p>
+    <form method="post" action="store.php" enctype="multipart/form-data">
         <label for="name">Name: </label><input type="text" name="name" id="name"><br>
+        <label for="image">Image: </label><input type="file" name="image" id="image"><br>
         <label for="price">Price: </label><input type="text" name="price" id="price"><br>
         <label for="quantity">Quantity: </label><input type="text" name="quantity" id="quantity"><br>
         <label for="brand_id">Brand: </label>

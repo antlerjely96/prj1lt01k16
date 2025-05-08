@@ -22,12 +22,13 @@
         //Đóng kết nối
         include_once "../Connection/close.php";
     ?>
-    <form method="post" action="update.php">
+    <form method="post" action="update.php" enctype="multipart/form-data">
         <?php
             foreach ($products as $product) {
         ?>
             <input type="hidden" name="id" value="<?php echo $product["id"]; ?>" />
             <label for="name">Name: </label><input type="text" name="name" id="name" value="<?php echo $product["name"]; ?>"><br>
+            <label for="image">Image: <img src="../image/<?php echo $product["image"]?>"> </label><input type="file" name="image" id="image"><br>
             <label for="price">Price: </label><input type="text" name="price" id="price" value="<?php echo $product["price"]; ?>"><br>
             <label for="quantity">Quantity: </label><input type="text" name="quantity" id="quantity" value="<?php echo $product["quantity"]; ?>"><br>
             <label for="brand_id">Brand: </label>
