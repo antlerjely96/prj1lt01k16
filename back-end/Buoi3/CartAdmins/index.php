@@ -9,6 +9,7 @@
     <title>Cart</title>
 </head>
 <body>
+    <h1>Cart (Session)</h1>
     <form method="post" action="updateCart.php">
         <table border="1px" cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -84,9 +85,72 @@
                 </tr>
             <?php
                 }
-                //Đóng kết nối
-                include_once "../Connection/close.php";
             ?>
+        </table>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <h1>Cart (DB)</h1>
+    <form method="post" action="updateCartDB.php">
+        <table border="1px" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <?php
+            //Lấy id của tài khoản đang đăng nhập
+            $admin_id = $_SESSION['admin_id'];
+            //sql
+            $sql = "SELECT cart_items.product_id, cart_items.quantity, products.name, products.image, products.price 
+                    FROM carts
+                    INNER JOIN cart_items ON carts.id = cart_items.cart_id
+                    INNER JOIN products ON products.id = cart_items.product_id
+                    WHERE carts.admin_id = '$admin_id'";
+            //Chạy sql
+            $carts = mysqli_query($connection, $sql);
+            //Hiển thị
+            foreach ($carts as $cart) {
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $cart['product_id']; ?>
+                    </td>
+                    <td>
+                        <?php echo $cart['name']; ?>
+                    </td>
+                    <td>
+                        <img src="../image/<?php echo $cart['image']; ?>" width="100px" height="100px" alt="Image">
+                    </td>
+                    <td>
+                        <a href="updateProductDB.php?id=<?php echo $cart['product_id'] ?>&&operation=minus&&quantity=<?php echo $cart['quantity']; ?>"> - </a>
+                        <input type="text" name="cart[<?php echo $cart['product_id'] ?>]" value="<?php echo $cart['quantity']; ?>">
+                        <a href="updateProductDB.php?id=<?php echo $cart['product_id'] ?>&&operation=plus&&quantity=<?php echo $cart['quantity']; ?>"> + </a>
+                    </td>
+                    <td>
+                        <?php echo $cart['price']; ?>
+                    </td>
+                    <td>
+                        <a href="deleteProductDB.php?id=<?php echo $cart['product_id'] ?>">Delete product</a>
+                    </td>
+                </tr>
+                <?php
+            }
+            ?>
+            <tr>
+                <td colspan="4">
+                    <button>Update Cart</button>
+                </td>
+                <td colspan="3">
+                    <a href="deleteCartDB.php">Delete Cart</a>
+                </td>
+            </tr>
         </table>
     </form>
 </body>

@@ -33,6 +33,7 @@
             <th></th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <?php
             //Mở kết nối
@@ -91,13 +92,16 @@
                     <?php echo $product["brand_name"] ?>
                 </td>
                 <td>
-                    <a href="../CartAdmins/addToCart.php?id=<?php echo $product["id"]; ?>">Add to cart</a>
+                    <a href="../CartAdmins/addToCart.php?id=<?php echo $product["id"]; ?>">Add to cart (Session)</a>
                 </td>
                 <td>
                     <a href="edit.php?id=<?php echo $product["id"]; ?>">Edit</a>
                 </td>
                 <td>
                     <a href="destroy.php?id=<?php echo $product["id"]; ?>">Delete</a>
+                </td>
+                <td>
+                    <a href="../CartAdmins/addToCartDB.php?id=<?php echo $product["id"]; ?>">Add to cart (DB)</a>
                 </td>
             </tr>
         <?php
