@@ -32,6 +32,7 @@
             <th>Brand</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <?php
             //Mở kết nối
@@ -78,7 +79,7 @@
                     <?php echo $product["name"] ?>
                 </td>
                 <td>
-                    <img src="../image/<?php echo $product["image"] ?>" alt="product image">
+                    <img src="../image/<?php echo $product["image"] ?>" alt="product image" width="100px" height="100px">
                 </td>
                 <td>
                     <?php echo $product["price"] ?>
@@ -88,6 +89,9 @@
                 </td>
                 <td>
                     <?php echo $product["brand_name"] ?>
+                </td>
+                <td>
+                    <a href="../CartAdmins/addToCart.php?id=<?php echo $product["id"]; ?>">Add to cart</a>
                 </td>
                 <td>
                     <a href="edit.php?id=<?php echo $product["id"]; ?>">Edit</a>
