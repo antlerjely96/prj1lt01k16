@@ -83,6 +83,11 @@
                         <a href="deleteCart.php">Delete Cart</a>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="7">
+                        <a href="checkOut.php">Check out</a>
+                    </td>
+                </tr>
             <?php
                 }
             ?>
@@ -149,6 +154,11 @@
                 </td>
                 <td colspan="3">
                     <a href="deleteCartDB.php">Delete Cart</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <a href="checkOutDB.php">Check out</a>
                 </td>
             </tr>
         </table>
